@@ -1,0 +1,169 @@
+<html>
+    {% load static %}
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Turismo</title>
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+            </style>
+            <!-- Custom styles for this template -->
+            <link href="{% static "css/carousel.css" %}" rel="stylesheet">
+            <link href="{% static "css/styles.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Turismo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                                <h1>Santiago</h1>
+                                <p>Santiago toma el sol en uno de los parajes más espectaculares de cualquier ciudad del mundo.</p>
+                            </div>
+                        </div>
+                        <img class="d-block w-100" src="{% static "img/1.jpg" %}" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption text-left">
+                                <h1>Templo Bahá’í</h1>
+                                <p>Tiene un diseño arquitectónico espectacular y una privilegiada vista a Santiago.</p>
+                                </div>
+                            </div>
+                        <img class="d-block w-100" src="{% static "img/2.jpg" %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                            <h3>Muchos más destinos</h3>
+                            <p><a class="btn btn-lg btn-primary" href="galeria.html" role="button">Galería</a></p>
+                            </div>
+                        </div>
+                        <img class="d-block w-100" src="{% static "img/3.jpg" %}" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        
+            <!-- Marketing  -->
+            <div class="container marketing">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="{% static "img/b2.jpg" %}">
+                    <h2>Sky Costanera</h2>
+                    <p>Torre del Costanera Center, el rascacielos más alto de América Latina.</p>
+                    <a href="http://www.skycostanera.cl">Sky Costanera</a>
+
+                </div>
+                <div class="col-lg-4">
+                    <img src="{% static "img/b1.jpg" %}">
+                    <h2>Templo Bahaí</h2>
+                    <p>Es uno de los 8 templos Bahai en el mundo -y el único en América del Sur- así que es un sitio realmente especial.</p>
+                    <a href="https://templo.bahai.cl/">Tomple Baha'í</a>
+                </div>
+                <div class="col-lg-4">
+                    <img src="{% static "img/b3.jpg" %}">
+                    <h2>Cerro San Cristóbal</h2>
+                    <p>Su cumbre la corona la Virgen del Cerro San Cristóbal, con un mirador desde el cual podrán ver buena parte de la ciudad.</p>
+                    <a href="https://santiagoando.com/cerro-san-cristobal-2">Cerro San Cristoal</a>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Gran Torre Santiago</h2>
+                    <p class="lead">Es un rascacielos de 300 metros de altura ubicado en la ciudad de Santiago, Chile.4​ Es parte del complejo Costanera Center, que comprende un centro comercial, dos hoteles y dos torres de oficinas.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static "img/1-500x500.jpg" %}">
+                </div>
+            </div>
+        
+            <hr class="featurette-divider">
+        
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Cerro Santa Lucía</h2>
+                    <p class="lead">El Cerro Santa Lucía es uno de los parques públicos más visitados por turistas nacionales y extranjeros, siendo uno de los íconos más reconocibles de la capital y del país.</p>
+                </div>
+                <div class="col-md-5 order-md-2">
+                    <img src="{% static "img/3-500x500.jpg" %}">
+                </div>
+            </div>
+        
+            <hr class="featurette-divider">
+        
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Templo Baha’í</h2>
+                    <p class="lead">En plena precordillera de Los Andes se encuentra este lugar de adoración, especial para aquellos que buscan tranquilidad o un momento de reflexión y serenidad, se permite practicar la libre adoración, la oración y el servicio, sin duda se trata de una experiencia distinta a todas.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static "img/2-500x500.jpg" %}">
+                </div>
+            </div>
+        
+            <hr class="featurette-divider">
+            <!-- /END-->
+        
+            </div><!-- /.container -->
+
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-right"><a href="#">Subir</a></p>
+                <p>&copy; 2019. Proturismo</p>
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
+    </body>
+</html>

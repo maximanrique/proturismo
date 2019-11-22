@@ -1,0 +1,132 @@
+<html>
+{% load static %}
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Turismo</title>
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+            </style>
+            <!-- Custom styles for this template -->
+            <link href="{% static "css/carousel.css" %}" rel="stylesheet">
+            <link href="{% static "css/styles.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Turismo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/galeria">Galería</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <main role="main">
+            <section class="resume-section p-5 p-lg-5 mt-2" id="contact">
+                <div class="my-auto row">
+                    <div class="col-md-2"></div>
+                    <form class="col-md-8 needs-validation" novalidate>
+                        <h2 class="mb-4 contacto">&lt; Contáctanos &gt;</h2>
+                        <div class="form-group">
+                            <label for="firstname">Nombres</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="Nombres" required>
+                            <div class="invalid-feedback">Ingresa el nombre.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Apellidos</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Apellidos" required>
+                            <div class="invalid-feedback">Ingresa el apellido.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">Ingresa un email.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" class="form-control" id="address" placeholder="Dirección" required>
+                            <div class="invalid-feedback">Ingresa una dirección.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="destino">Destino de preferencia</label>
+                            <select id="destino" class="form-control" required>
+                                <option value="" selected>Selecciona...</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Estados Unidos">Estados Unidos</option>
+                                <option value="Peru">Perú</option>
+                                <option value="Colombia">Colombia</option>
+                            </select>
+                            <div class="invalid-feedback">Selecciona una opción.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>    
+                </div>
+            </section>
+            <!-- FOOTER -->
+            <footer class="container" onclick="footerData()">
+                <p>&copy; 2019. Proturismo</p>
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
+    </body>
+</html>
+<script>
+    // Validacion del formulario
+    (function() {
+        'use strict';
+        window.addEventListener('load', () => {
+        // busca el formulario con la clase que se agrego
+        let forms = document.getElementsByClassName('needs-validation');
+        
+        // Revisa si el formulario es valido o no
+        let validation = Array.prototype.filter.call(forms, (form) => {
+            form.addEventListener('submit', (event) => {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            
+            agregarClase(form);
+            }, false);
+        });
+        }, false);
+    })();
+
+    function agregarClase(form){
+        form.classList.add('was-validated');
+    }
+
+    function footerData(){
+        console.log("Presionó el footer.");
+    }
+</script>
