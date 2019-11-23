@@ -127,11 +127,11 @@ class Imagenes(models.Model):
 
 
 class Contacto(models.Model):
-    nombre = models.CharField(max_length=45, blank=True, null=True)
-    apellido = models.CharField(max_length=45, blank=True, null=True)
-    email = models.CharField(max_length=250, blank=True, null=True)
-    direccion = models.CharField(max_length=250, blank=True, null=True)
-    preferencia = models.CharField(max_length=150, blank=True, null=True)
+    nombre = models.CharField(max_length=45, blank=False, null=False)
+    apellido = models.CharField(max_length=45, blank=False, null=False)
+    email = models.CharField(max_length=250, blank=False, null=False)
+    direccion = models.CharField(max_length=250, blank=False, null=False)
+    preferencia = models.CharField(max_length=150, blank=False, null=False)
 
     class Meta:
         # managed = False
