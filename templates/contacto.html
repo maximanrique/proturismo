@@ -52,31 +52,32 @@
             <section class="resume-section p-5 p-lg-5 mt-2" id="contact">
                 <div class="my-auto row">
                     <div class="col-md-2"></div>
-                    <form class="col-md-8 needs-validation" novalidate>
+                    <form class="col-md-8 needs-validation" novalidate action="/contacto/" method="POST">
+                        {% csrf_token %}
                         <h2 class="mb-4 contacto">&lt; Contáctanos &gt;</h2>
                         <div class="form-group">
                             <label for="firstname">Nombres</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="Nombres" required>
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombres" required>
                             <div class="invalid-feedback">Ingresa el nombre.</div>
                         </div>
                         <div class="form-group">
                             <label for="lastname">Apellidos</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Apellidos" required>
+                            <input type="text" class="form-control" name="apellido" placeholder="Apellidos" required>
                             <div class="invalid-feedback">Ingresa el apellido.</div>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
                             <div class="invalid-feedback">Ingresa un email.</div>
                         </div>
                         <div class="form-group">
                             <label for="address">Dirección</label>
-                            <input type="text" class="form-control" id="address" placeholder="Dirección" required>
+                            <input type="text" class="form-control" name="direccion" placeholder="Dirección" required>
                             <div class="invalid-feedback">Ingresa una dirección.</div>
                         </div>
                         <div class="form-group">
                             <label for="destino">Destino de preferencia</label>
-                            <select id="destino" class="form-control" required>
+                            <select name="preferencia" class="form-control" required>
                                 <option value="" selected>Selecciona...</option>
                                 <option value="Brasil">Brasil</option>
                                 <option value="Argentina">Argentina</option>
