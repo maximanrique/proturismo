@@ -139,3 +139,16 @@ class Contacto(models.Model):
 
     def __str__(self):  # __unicode__ on Python 2.7
         return self.nombre + " " + self.apellido
+
+    def getFullName(self):
+        # Nombre completo
+        fullName = '%s %s' % (self.nombre, self.apellido)
+        return fullName.strip()
+
+    def getShortName(self):
+        #Solo el nombre
+        return self.nombre
+    
+    @classmethod
+    def getById(cls, uid):
+        return Contacto.objects.get(pk=uid)
