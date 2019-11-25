@@ -1,10 +1,16 @@
 ## Proyecto con Django
 
-#### Para crear un superusuario
+### Pasos a seguir
+
+##### Para generar la base de datos
+- Cambiar los datos correspondientes a la base de datos en `settings.py`
+- Ejecutar `python manage.py migrate`
+
+#####  Crear un superusuario
 - Ejecutar `python manage.py createsuperuser`
 - Seguir pasos
 
-#### Para ejecutar los tests:
+##### Ejecutar los tests:
 - Ejecutar `python manage.py test`
 - Esperar el siguiente resultado
 
@@ -19,4 +25,4 @@ OK
 Destroying test database for alias 'default'...
 ```
 
-
+Recordar ademas, cambiar los datos referentes al envio de correo via SMTP en `settings.py`
