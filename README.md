@@ -1,5 +1,9 @@
 ## Proyecto con Django
 
+#### Para crear un superusuario
+- Ejecutar `python manage.py createsuperuser`
+- Seguir pasos
+
 #### Para ejecutar los tests:
 - Ejecutar `python manage.py test`
 - Esperar el siguiente resultado
